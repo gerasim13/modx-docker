@@ -23,29 +23,13 @@ RUN touch /app/core/config/config.inc.php && \
     chmod -R 777 /app/core/import && \
     chmod -R 777 /app/core/export && \
     chmod -R 777 /app/assets && \
-    # chmod 701 /app/core/packages/core/modAccessPolicy && \
-    # chmod 701 /app/core/packages/core/modAccessPolicyTemplate && \
-    # chmod 701 /app/core/packages/core/modAccessPolicyTemplateGroup && \
-    # chmod 701 /app/core/packages/core/modAction && \
-    # chmod 701 /app/core/packages/core/modClassMap && \
-    # chmod 701 /app/core/packages/core/modContentType && \
-    # chmod 701 /app/core/packages/core/modContext && \
-    # chmod 701 /app/core/packages/core/modContextSetting && \
-    # chmod 701 /app/core/packages/core/modEvent && \
-    # chmod 701 /app/core/packages/core/modMenu && \
-    # chmod 701 /app/core/packages/core/modNamespace && \
-    # chmod 701 /app/core/packages/core/modSystemSetting && \
-    # chmod 701 /app/core/packages/core/modTransportProvider && \
-    # chmod 701 /app/core/packages/core/modUserGroup && \
-    # chmod 701 /app/core/packages/core/modUserGroupRole && \
-    # chmod 701 /app/core/packages/core/modWorkspace && \
     chmod 701 /app/core/xpdo/compression/xpdozip.class.php && \
     chmod 644 /app/core/config/config.inc.php && \
     chmod 644 /app/core/packages/core/manifest.php
 
-# RUN mv /app/ht.access /app/.htaccess && \
-#     mv /app/manager/ht.access /app/manager/.htaccess && \
-#     mv /app/core/ht.access /app/core/.htaccess
+RUN mv /app/ht.access /app/.htaccess && \
+    mv /app/manager/ht.access /app/manager/.htaccess && \
+    mv /app/core/ht.access /app/core/.htaccess
 
 # ENV MYSQL_SERVER_TYPE myslq
 # ENV MYSQL_SERVER_HOST localhost
