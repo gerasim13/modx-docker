@@ -7,7 +7,7 @@ ADD https://modx.s3.amazonaws.com/releases/${MODX}/modx-${MODX}-pl.zip /tmp/${MO
 RUN apt-get update && apt-get install zip unzip && \
     unzip /tmp/${MODX}.zip -d /tmp && \
     rm -rf /app/* && \
-    cp -r /tmp/modx-${MODX}/* /app && \
+    cp -r /tmp/modx-${MODX}-pl/* /app && \
     rm -rf /tmp/*
 
 VOLUME /app/assets
