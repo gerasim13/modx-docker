@@ -1,8 +1,8 @@
 FROM tutum/apache-php
 MAINTAINER Pavel Litvinenko <gerasim13@gmail.com>
 
-ENV MODX 2.3.5-pl
-ADD http://modx.com/download/direct/modx-${MODX}.zip /tmp/${MODX}.zip
+ENV MODX 2.1.5
+ADD https://modx.s3.amazonaws.com/releases/${MODX}/modx-${MODX}-pl.zip /tmp/${MODX}.zip
 
 RUN apt-get update && apt-get install zip unzip && \
     unzip /tmp/${MODX}.zip -d /tmp && \
